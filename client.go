@@ -50,7 +50,7 @@ func main() {
 	//proxy, _ := url.Parse("http://localhost:8080")
 	//p.SetDownstreamProxy(proxy)
 
-	l, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", *port))
+	l, err := net.Listen("tcp", fmt.Sprintf("0.0.0.0:%d", *port))
 	if err != nil {
 		log.Fatal(err)
 	}
